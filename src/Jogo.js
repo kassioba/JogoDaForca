@@ -7,9 +7,17 @@ export default function Jogo({
 }) {
   return (
     <div className="jogo">
-      <img src={`./assets/forca${numeroImagem}.png`} alt="" />
-      <button onClick={comecar}>Escolher Palavra</button>
-      <div className={classePalavra}>{sublinhado}</div>
+      <img
+        src={`./assets/forca${numeroImagem}.png`}
+        alt=""
+        data-test="game-image"
+      />
+      <button onClick={comecar} data-test="choose-word">
+        Escolher Palavra
+      </button>
+      <div className={classePalavra} data-test="word">
+        {sublinhado}
+      </div>
     </div>
   );
 }

@@ -17,6 +17,7 @@ export default function Letra({
     <div className="letra">
       {letras.map((letra) => (
         <button
+          data-test="letter"
           key={letra}
           disabled={disabled.includes(letra)}
           className={inicio.includes(letra) ? "jogo-inicial" : "jogo-iniciado"}
